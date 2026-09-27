@@ -150,7 +150,7 @@ This project demonstrates the fundamentals of low-level network programming and 
 
 ## Author
 
-**Banasree Maji**
+**Oiendri Mukhopadhyay**
 
 B.Tech in Computer Science & Engineering
 
