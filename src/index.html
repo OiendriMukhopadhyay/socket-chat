@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat Client Selection</title>
+  <script>
+    // Show text box only if Writer is selected
+    function toggleMessageBox() {
+      const writerRadio = document.getElementById("writer");
+      const messageBox = document.getElementById("messageBox");
+      if (writerRadio.checked) {
+        messageBox.style.display = "block";
+      } else {
+        messageBox.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body style="font-family: Arial; text-align:center; background-color: #f9f9f9;">
+  <h2>Chat Client Selection</h2>
+  <form action="http://localhost:5000" method="POST">
+    <label>Choose client type:</label><br><br>
+
+    <input type="radio" name="type" value="Reader" onclick="toggleMessageBox()" required> Reader<br>
+    <input type="radio" id="writer" name="type" value="Writer" onclick="toggleMessageBox()" required> Writer<br><br>
+
+    <div id="messageBox" style="display:none;">
+      <label>Enter your message:</label><br>
+      <textarea name="message" rows="4" cols="40" placeholder="Type your chat message here..."></textarea><br><br>
+    </div>
+
+    <input type="submit" value="Send">
+  </form>
+</body>
+</html>
